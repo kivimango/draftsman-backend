@@ -24,4 +24,3 @@ nbdist/
 .nb-gradle/
 
 target/
-.mvn
