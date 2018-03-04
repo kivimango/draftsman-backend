@@ -2,6 +2,7 @@ package com.kivimango.draftsman.backend.service;
 
 import java.util.List;
 import com.kivimango.draftsman.backend.domain.DraftDTO;
+import com.kivimango.draftsman.backend.exception.DraftNotFoundException;
 
 /**
  * @author kivimango
@@ -20,5 +21,14 @@ public interface DraftService {
 	*/
 	
 	List<DraftDTO> findByPartNumber(String pn);
+
+	/**
+	 * Searches the database for the given id.
+	 * @param id
+	 * @return The Draft is identified by the given id
+	 * @throws DraftNotFoundException if the requested id not found in the datastore
+	 */
+	
+	DraftDTO findById(Integer id) throws DraftNotFoundException;
 
 }
