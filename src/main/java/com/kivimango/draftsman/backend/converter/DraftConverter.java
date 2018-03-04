@@ -44,7 +44,7 @@ public final class DraftConverter {
 	 */
 	
 	public DraftDTO convert(final Draft draft) {
-		final DraftDTO dto = new DraftDTO(draft.getId(), draft.getPartNumber(), draft.getVersion(), draft.getSheeŧ());
+		final DraftDTO dto = new DraftDTO(draft.getId(), draft.getImage(), draft.getPartNumber(), draft.getVersion(), draft.getSheeŧ());
 		return dto;
 	}
 
