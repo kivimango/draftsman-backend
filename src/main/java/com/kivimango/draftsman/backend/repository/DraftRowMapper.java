@@ -11,12 +11,18 @@ import com.kivimango.draftsman.backend.domain.Draft;
  * @version 0.1
  */
 
-public class DraftRowMapper implements RowMapper<Draft> {
+final class DraftRowMapper implements RowMapper<Draft> {
+	
+	private static String fileRepoPath;
+	
+	public DraftRowMapper(String path) {
+		fileRepoPath = path;
+	}
 
 	@Override
 	public Draft mapRow(ResultSet rs, int row) throws SQLException {
 		Draft draft = new Draft.Builder().id(rs.getInt("dr_id"))
-				.image(rs.getString("img_src"))
+				.image(fileRepoPath + rs.getString("img_src"))
 				.partNumber(rs.getString("part_number"))
 				.version(rs.getString("version"))
 				.sheet(rs.getInt("sheet"))
