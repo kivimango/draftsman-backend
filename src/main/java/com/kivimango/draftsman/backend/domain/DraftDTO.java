@@ -14,12 +14,14 @@ package com.kivimango.draftsman.backend.domain;
 public final class DraftDTO {
 	
 	private final Integer id;
+	private final String image;
 	private final String partNumber;
 	private final String version;
 	private final Integer sheet;
 	
-	public DraftDTO(Integer id, String partNumber, String version, Integer sheeŧ) {
+	public DraftDTO(Integer id, String image, String partNumber, String version, Integer sheeŧ) {
 		this.id = id;
+		this.image = image;
 		this.partNumber = partNumber;
 		this.version = version;
 		this.sheet = sheeŧ;
@@ -27,6 +29,10 @@ public final class DraftDTO {
 
 	public Integer getId() {
 		return id;
+	}
+	
+	public String getImage() {
+		return image;
 	}
 
 	public String getPartNumber() {
